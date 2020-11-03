@@ -37,8 +37,7 @@ AthleteHub
 ログイン・ログアウト機能
 質問投稿機能
 質問内容一覧機能（トップページ）
-質問ルーム機能
-質問に対してのレスポンス機能
+質問に対してのコメント機能
 ダイレクトメッセージ機能
 動画投稿機能
 
@@ -51,28 +50,35 @@ AthleteHub
 | nickname          | string | null: false                       |
 | email             | string | null: false, uniqueness:true      |
 | password          | string | null: false, uniqueness:true      |
-| birth_date        | date   | null: false                       |
 
-## rooms テーブル
+## chat テーブル
 
 | Column | Type   | Options     |
 | ------ | ------ | ----------- |
 | name   | string | null: false |
 
-## room_users テーブル
+## chat_users テーブル
 
 | Column | Type       | Options                        |
 | ------ | ---------- | ------------------------------ |
+| chat   | references | null: false, foreign_key: true |
 | user   | references | null: false, foreign_key: true |
-| room   | references | null: false, foreign_key: true |
 
-## messages テーブル
+## contents テーブル
 
 | Column  | Type       | Options                        |
 | ------- | ---------- | ------------------------------ |
-| content | string     |                                |
+| text    | string     |                                |
 | user    | references | null: false, foreign_key: true |
-| room    | references | null: false, foreign_key: true |
+
+## comments テーブル
+
+| Column  | Type       | Options                        |
+| ------- | ---------- | ------------------------------ |
+| user    | references | null: false, foreign_key: true |
+| content | references | null: false, foreign_key: true |
+| text    | string     |                                |
+
 
 # 動作環境
 
