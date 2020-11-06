@@ -68,7 +68,8 @@ AthleteHub
 
 | Column  | Type       | Options                        |
 | ------- | ---------- | ------------------------------ |
-| text    | string     |                                |
+| title   | string     | null: false                    |
+| text    | string     | null: false                    |
 | user    | references | null: false, foreign_key: true |
 
 ## comments テーブル
@@ -77,7 +78,7 @@ AthleteHub
 | ------- | ---------- | ------------------------------ |
 | user    | references | null: false, foreign_key: true |
 | content | references | null: false, foreign_key: true |
-| text    | string     |                                |
+| text    | string     | null: false                    |
 
 
 # 動作環境
