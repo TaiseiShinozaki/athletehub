@@ -1,7 +1,8 @@
 class ContentsController < ApplicationController
-  
+  before_action :move_to_root_path, except: [:index, :show]
+
   def index
-    @contents = Content.all
+    @contents = Content.all.order("created_at DESC")
   end
 
   def new
@@ -10,6 +11,7 @@ class ContentsController < ApplicationController
 
   def create
     @content = Content.new(content_params)
+    #binding.pry
     if @content.save
       redirect_to root_path
     else
@@ -17,10 +19,20 @@ class ContentsController < ApplicationController
     end
   end
 
+  def show
+    @content = Content.find(params[:id])
+  end
+
+
+
   private
 
+  def move_to_root_path
+    redirect_to root_path if user_signed_in? == false
+  end
+  
   def content_params
-    params.require(:content).permit(:title, :text)
+    params.require(:content).permit(:title, :text).merge(user_id: current_user.id)
   end
 
 end
