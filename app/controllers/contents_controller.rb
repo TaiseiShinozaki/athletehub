@@ -21,12 +21,11 @@ class ContentsController < ApplicationController
 
   def show
     @content = Content.find(params[:id])
+    @comment = Comment.new
+    @comments = @content.comments.includes(:user)
   end
 
-
-
   private
-
   def move_to_root_path
     redirect_to root_path if user_signed_in? == false
   end

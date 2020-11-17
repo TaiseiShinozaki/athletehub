@@ -1,6 +1,28 @@
 <div class="contents">
-  <h2 class="title">
+  <h1 class="title">
     <%= @content.title %>
-  </h2>
+  </h1>
     <%= @content.text %>
+</div>
+<div class="container">
+  <h2>コメントを投稿する</h2>
+  <% if user_signed_in? %>
+    <%= form_with model: [@content, @comment], local: true do |f| %>
+      <%= f.text_area :text, rows: "6" %>
+      <%= f.submit "SEND" %>
+    <% end %>
+  <% else %>
+    <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
+  <% end %>
+</div>
+<div class="comments">
+  <h3>＜コメント一覧＞</h3>
+  <% if @comments %>
+    <% @comments.each do |comment| %>
+      <p>
+        <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}" %>：</strong>
+        <%= comment.text %>
+      </p>
+    <% end %>
+  <% end %>
 </div>
