@@ -13,3 +13,39 @@
  *= require_tree .
  *= require_self
  */
+
+ header{
+  height: 80px;
+  width: 100vw;
+  background-color: #3399FF;
+}
+
+.header-bar{
+  display: flex;
+  justify-content: space-between;
+}
+
+ul{
+  list-style: none;
+  font-size: 20px;
+}
+
+a{
+  font-size: 40px;
+  font-family: 'Open Sans', sans-serif;
+  padding: 0 0 20px 0;
+  text-decoration: none;
+  color: black;
+}
+
+a.new-post{
+  font-size: 40px;
+  padding: 20px 20px;
+  font-family: 'Open Sans', sans-serif;
+  text-decoration: none;
+  color: black;
+  font-family: "Sawarabi Gothic";
+}
+
+
+ 

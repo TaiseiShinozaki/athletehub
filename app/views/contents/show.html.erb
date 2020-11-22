@@ -1,11 +1,18 @@
 <div class="contents">
-  <h1 class="title">
+  <div class="contents-title">
     <%= @content.title %>
-  </h1>
+  </div>
+  <div class="contents-text">
     <%= @content.text %>
+  </div>
+  <div class="delete-contents">
+    <% if user_signed_in? && current_user.id == @content.user_id %>
+    <%= link_to '投稿を削除', content_path(@content.id), method: :delete %>
+    <% end %>
+  </div>
 </div>
-<div class="container">
-  <h2>コメントを投稿する</h2>
+<div class="comment-form">
+  <p>コメントを投稿する</p>
   <% if user_signed_in? %>
     <%= form_with model: [@content, @comment], local: true do |f| %>
       <%= f.text_area :text, rows: "6" %>
@@ -16,13 +23,10 @@
   <% end %>
 </div>
 <div class="comments">
-  <h3>＜コメント一覧＞</h3>
+  <h1>＜コメント一覧＞</h1>
   <% if @comments %>
     <% @comments.each do |comment| %>
-      <p>
-        <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}" %>：</strong>
-        <%= comment.text %>
-      </p>
+      <p><%= comment.user.nickname %>: <%= comment.text %></p>
     <% end %>
   <% end %>
 </div>
