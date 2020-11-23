@@ -16,13 +16,41 @@
 
  header{
   height: 80px;
-  width: 100vw;
   background-color: #3399FF;
+  display: flex;
 }
 
-.header-bar{
+.heading{
+  width: 50%;
+}
+
+.navbar{
+  width: 50%;
+}
+
+.nav-lists{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+}
+
+a.user-nickname{
+  text-decoration: none;
+  color: black;
+}
+
+a.logout{
+  text-decoration: none;
+  color: black;
+}
+
+a.login{
+  text-decoration: none;
+  color: black;
+}
+
+a.sign-up{
+  text-decoration: none;
+  color: black;
 }
 
 ul{
@@ -30,22 +58,29 @@ ul{
   font-size: 20px;
 }
 
-a{
+p a{
   font-size: 40px;
   font-family: 'Open Sans', sans-serif;
-  padding: 0 0 20px 0;
+  padding: 0 0 20px 20px;
   text-decoration: none;
   color: black;
 }
 
 a.new-post{
-  font-size: 40px;
-  padding: 20px 20px;
-  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  border: 1px solid black;
+  padding: 12px;
   text-decoration: none;
   color: black;
   font-family: "Sawarabi Gothic";
 }
 
+footer{
+  text-align: center;
+  color: gray;
+}
 
+p{
+  font-family: 'Open Sans', sans-serif;
+}
  

@@ -5,13 +5,13 @@
     <link rel="stylesheet" href="index.css">
   </head>
   <body>
-    <h1>投稿一覧</h1>
     <div class="contents">
-      <div class="first-content">
+      <h1 class="heading-name">投稿一覧</h1>
+      <ul class="content-lists">
         <% @contents.each do |content| %>
-        <p><%= link_to content.title, content_path(content.id) %></p>
+        <li><%= link_to content.title, content_path(content.id) %></li>
         <% end %>
-      </div>
+      </ul>
     </div>
 
   </body>

@@ -16,10 +16,13 @@
   </head>
 
   <body>
-    <header class="header">
-      <div class="header-bar">
-        <h1><a href="/">AthleteHub</a></h1>
-        <ul>
+    <header>
+      <div class="heading">
+        <p><a href="/">AthleteHub</a></p>
+        //アスリートのための情報共有サイト//
+      </div>
+      <div class="navbar">
+        <ul class="nav-lists">
         <% if user_signed_in? %>
           <li><%= link_to current_user.nickname, "/users/#{current_user.id}", class: "user-nickname" %></li>
           <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
@@ -27,15 +30,13 @@
           <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
           <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
         <% end %>
+          <li><a class="new-post" href="/contents/new">投稿する</a></li>
         </ul>
-        <a class="new-post" href="/contents/new">投稿する</a>
       </div>
     </header>
     <%= yield %>
     <footer>
-      <p>
-        AthleteHub 2020.
-      </p>
+      <p>AthleteHub <span>2020.</span></p>
     </footer>
   </body>
 </html>

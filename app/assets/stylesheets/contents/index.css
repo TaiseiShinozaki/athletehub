@@ -1,9 +1,28 @@
-.first-content{
+div.contents{
   height: 80vh;
   width: 100vw;
+  margin: 0 auto;
   background-color: whitesmoke;
 }
 
-p{
-  font-size: 20px;
+h1.heading-name{
+  text-align: center;
+  border-bottom: 1px solid red;
+  margin: 0 auto;
+  padding: 20px;
+  width: 200px;
+}
+
+ul.content-lists{
+  text-align: center;
+  padding: 0 0 0 0;
+}
+
+li{
+  padding: 0 0 20px 0;
+}
+
+a{
+  text-decoration: none;
+  color: black;
 }

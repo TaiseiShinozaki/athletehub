@@ -7,7 +7,7 @@
   </div>
   <div class="delete-contents">
     <% if user_signed_in? && current_user.id == @content.user_id %>
-    <%= link_to '投稿を削除', content_path(@content.id), method: :delete %>
+    <p><%= link_to '投稿を削除', content_path(@content.id), method: :delete %></p>
     <% end %>
   </div>
 </div>
