@@ -47,7 +47,7 @@ AthleteHub
 
 | Column            | Type   | Options                           |
 | ----------------- | ------ | --------------------------------- |
-| nickname          | string | null: false, uniqueness:true      |
+| username          | string | null: false, uniqueness:true      |
 | email             | string | null: false, uniqueness:true      |
 | password          | string | null: false, uniqueness:true      |
 

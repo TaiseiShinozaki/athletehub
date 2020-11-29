@@ -1,0 +1,36 @@
+p {
+  margin: 0;
+}
+
+div.post-container{
+  display: flex;
+  align-items: center;
+}
+
+.post-btn{
+  border-radius: 20px;
+  background: orange;
+  border: none;
+  width: 90px;
+  height: 40px;
+  color: white;
+}
+
+.post-btn:hover{
+  box-shadow: none;
+  color: white;
+  background: orange;
+}
+
+.content-text{
+  resize: none;
+  width: 600px;
+  height: 300px;
+  border-radius: 20px;
+  border: 1px solid gray;
+}
+
+.content-title{
+  border-radius: 20px;
+  border: 1px solid gray;
+}

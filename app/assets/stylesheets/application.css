@@ -22,6 +22,11 @@
 
 .heading{
   width: 50%;
+  display: flex;
+}
+
+.head-lists {
+  display: flex;
 }
 
 .navbar{
@@ -31,9 +36,10 @@
 .nav-lists{
   display: flex;
   justify-content: space-around;
+  margin: 20px 0 0 0;
 }
 
-a.user-nickname{
+a.username{
   text-decoration: none;
   color: black;
 }
@@ -58,17 +64,25 @@ ul{
   font-size: 20px;
 }
 
+ul.head-lists{
+  margin: 20px 0 0 0;
+}
+
 p a{
   font-size: 40px;
   font-family: 'Open Sans', sans-serif;
-  padding: 0 0 20px 20px;
+  padding: 0;
   text-decoration: none;
   color: black;
 }
 
+.head-lists li{
+  font-size: 16px;
+  padding: 20px 0 0 20px;
+}
+
 a.new-post{
   font-size: 20px;
-  border: 1px solid black;
   padding: 12px;
   text-decoration: none;
   color: black;
@@ -76,11 +90,16 @@ a.new-post{
 }
 
 footer{
-  text-align: center;
-  color: gray;
+  height: 80px;
 }
 
-p{
+ .footer-container{
+  display: flex;
+  justify-content: center;
+}
+
+.footer-exp{
   font-family: 'Open Sans', sans-serif;
+  color: gray;
 }
  

@@ -26,7 +26,7 @@
   <h1>＜コメント一覧＞</h1>
   <% if @comments %>
     <% @comments.each do |comment| %>
-      <p><%= comment.user.nickname %>: <%= comment.text %></p>
+      <p><%= comment.user.username %>: <%= comment.text %></p>
     <% end %>
   <% end %>
 </div>
