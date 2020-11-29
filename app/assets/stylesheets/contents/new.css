@@ -2,9 +2,17 @@ p {
   margin: 0;
 }
 
-div.post-container{
+.contents-box{
   display: flex;
+  background-color: lightgray;
+  height: 90vh;
+  width: 100vw;
   align-items: center;
+  justify-content: center;
+}
+
+.post-container{
+  background-color: lightgray;
 }
 
 .post-btn{
@@ -33,4 +41,8 @@ div.post-container{
 .content-title{
   border-radius: 20px;
   border: 1px solid gray;
+}
+
+.btn-box{
+  align-items: center;
 }
