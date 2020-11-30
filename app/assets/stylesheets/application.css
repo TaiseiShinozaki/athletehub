@@ -16,8 +16,9 @@
 
  header{
   height: 80px;
-  background-color: #3399FF;
+  background-color: whitesmoke;
   display: flex;
+  border-bottom: 1px solid lightgray;
 }
 
 .heading{

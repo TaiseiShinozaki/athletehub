@@ -4,7 +4,7 @@ p {
 
 .contents-box{
   display: flex;
-  background-color: lightgray;
+  background-color: whitesmoke;
   height: 90vh;
   width: 100vw;
   align-items: center;
@@ -12,7 +12,7 @@ p {
 }
 
 .post-container{
-  background-color: lightgray;
+  background-color: whitesmoke;
 }
 
 .post-btn{
