@@ -15,21 +15,18 @@ p {
   background-color: whitesmoke;
 }
 
-.post-btn{
-  border-radius: 20px;
-  background: orange;
-  border: none;
-  width: 90px;
-  height: 40px;
-  color: white;
-}
-
-.title-box{
+.content-title-box{
   text-align: center;
   margin-bottom: 40px;
 }
 
-.text-box{
+.content-title{
+  border-radius: 20px;
+  border: 1px solid gray;
+  height: 20px;
+}
+
+.content-text-box{
   margin-bottom: 40px;
 }
 
@@ -41,11 +38,15 @@ p {
   border: 1px solid gray;
 }
 
-.content-title{
-  border-radius: 20px;
-  border: 1px solid gray;
+.post-btn-box{
+  text-align: center;
 }
 
-.btn-box{
-  text-align: center;
+.post-btn{
+  border-radius: 20px;
+  background: orange;
+  border: none;
+  width: 90px;
+  height: 40px;
+  color: white;
 }

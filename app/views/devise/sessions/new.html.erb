@@ -5,10 +5,10 @@
     <link rel="stylesheet" href="sessions.new.css">
   </head>
   <body>
-    <div class="form-box">
+    <div class="sessions-form-box">
       <div class="sessions-form">
-        <div class="title-box">
-          <h1 class="page-title">ログインする</h1>
+        <div class="sessions-title-box">
+          <h1 class="sessions-page-title">ログインする</h1>
         </div>
           <%= form_with model: @user, url: user_session_path, local: true do |f| %>
         <div class="name-box">
@@ -26,7 +26,7 @@
           <%= f.label :remember_me %>
         </div>
         <% end %>
-        <div class="btn-box">
+        <div class="sessions-btn-box">
           <%= f.submit "ログイン", class:"sessions-btn" %>
         </div>
         <% end %>

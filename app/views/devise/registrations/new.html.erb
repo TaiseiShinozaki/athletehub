@@ -5,10 +5,10 @@
     <link rel="stylesheet" href="registrations.new.css">
   </head>
   <body>
-    <div class="form-box">
+    <div class="registration-form-box">
       <div class="registration-form">
-        <div class="title-box">
-          <h1 class="page-title">アカウントを作成</h1>
+        <div class="registration-title-box">
+          <h1 class="registration-page-title">アカウントを作成</h1>
         </div>
           <%= form_with model: @user, url: user_registration_path, local: true do |f| %>
           <%= render "devise/shared/error_messages", resource: resource %>
@@ -27,7 +27,7 @@
         <div class="pass-confirmation-box">
           <%= f.password_field :password_confirmation, class:"password-confirmation", placeholder:"パスワード(確認)" %>
         </div>
-        <div class="btn-box">
+        <div class="registrations-btn-box">
           <%= f.submit "登録する", class:"registrations-btn" %>
         </div>
         <% end %>

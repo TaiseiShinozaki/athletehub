@@ -1,3 +1,34 @@
-delete-contents p{
-  font-size: 20px;
+.post-detail-container{
+  height: 90vh;
+  width: 100vw;
+  text-align: center;
+  background-color: whitesmoke;
+}
+
+.main-container{
+  text-align: center;
+}
+
+.sub-container{
+  text-align: center;
+}
+
+.comment-box{
+  resize: none;
+  width: 600px;
+  height: 300px;
+  border-radius: 20px;
+}
+
+.comment-post-btn{
+  border-radius: 20px;
+  background: orange;
+  border: none;
+  width: 90px;
+  height: 40px;
+}
+
+
+.comment-lists-title{
+  text-align: center;
 }

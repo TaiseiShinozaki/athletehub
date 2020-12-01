@@ -1,3 +1,16 @@
+.sessions-form-box{
+  display: flex;
+  background-color: whitesmoke;
+  justify-content: center;
+  height: 90vh;
+  width: 100vw;
+}
+
+.sessions-title-box{
+  text-align: center;
+  margin-bottom: 40px;
+}
+
 .name-box{
   margin-bottom: 40px;
 }
@@ -9,6 +22,10 @@
 .record-box{
   text-align: center;
   margin-bottom: 30px;
+}
+
+.sessions-btn-box{
+  text-align: center;
 }
 
 .sessions-btn{

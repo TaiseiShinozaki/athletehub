@@ -1,32 +1,55 @@
-<div class="contents">
-  <div class="contents-title">
-    <%= @content.title %>
-  </div>
-  <div class="contents-text">
-    <%= @content.text %>
-  </div>
-  <div class="delete-contents">
-    <% if user_signed_in? && current_user.id == @content.user_id %>
-    <p><%= link_to '投稿を削除', content_path(@content.id), method: :delete %></p>
-    <% end %>
-  </div>
-</div>
-<div class="comment-form">
-  <p>コメントを投稿する</p>
-  <% if user_signed_in? %>
-    <%= form_with model: [@content, @comment], local: true do |f| %>
-      <%= f.text_area :text, rows: "6" %>
-      <%= f.submit "SEND" %>
-    <% end %>
-  <% else %>
-    <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
-  <% end %>
-</div>
-<div class="comments">
-  <h1>＜コメント一覧＞</h1>
-  <% if @comments %>
-    <% @comments.each do |comment| %>
-      <p><%= comment.user.username %>: <%= comment.text %></p>
-    <% end %>
-  <% end %>
-</div>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charaset="UTF-8">
+    <link rel="stylesheet" href="show.css">
+  </head>
+  <body>
+    <div class="post-detail-container">
+      <div class="main-container">
+        <div class="post-title-box">
+          <%= @content.title %>
+        </div>
+        <div class="post-text-box">
+          <%= @content.text %>
+        </div>
+        <div class="delete-contents">
+          <% if user_signed_in? && current_user.id == @content.user_id %>
+          <p><%= link_to '投稿を削除', content_path(@content.id), method: :delete, class:"delete-btn" %></p>
+          <% end %>
+        </div>
+      </div>
+      <div class="sub-container">
+        <div class="comment-post-title-box">
+          <h1 class="comment-post-title">コメントを投稿する</h1>
+        </div>
+        <div class="comment-form-box">
+          <% if user_signed_in? %>
+          <%= form_with model: [@content, @comment], local: true do |f| %>
+            <%= f.text_area :text, rows: "6", class:"comment-box" %>
+            <div class="comment-btn-box">
+              <%= f.submit "投稿する", class:"comment-post-btn" %>
+            </div>
+          <% end %>
+          <% else %>
+          <div class="comment-guide-box">
+            <h2 class="comment-guide">※※※ コメントの投稿にはアカウント登録/ログインが必要です ※※※</h2>
+          </div>
+          <% end %>
+        </div>
+      </div>
+      <div class="third-container">
+        <% if @comments %>
+          <div class="comment-lists-title-box">
+            <h3 class="comment-lists-title">コメント一覧</h3>
+          </div>
+          <% @comments.each do |comment| %>
+          <div class="comment-lists">
+            <p><%= comment.user.username %>: <%= comment.text %></p>
+          </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </body>
+</html>

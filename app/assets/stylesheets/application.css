@@ -94,7 +94,7 @@ footer{
   height: 80px;
 }
 
- .footer-container{
+.footer-container{
   display: flex;
   justify-content: center;
 }
