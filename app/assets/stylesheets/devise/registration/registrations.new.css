@@ -1,4 +1,67 @@
+.form-box{
+  display: flex;
+  background-color: whitesmoke;
+  justify-content: center;
+  height: 90vh;
+  width: 100vw;
+}
+
+.name-box{
+  text-align: center;
+  margin-bottom: 30px;
+}
+
 .username{
   border-radius: 20px;
   resize: none;
+  width: 200px;
+  height: 20px;
+}
+  
+.email-box{
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.email{
+  width: 300px;
+  border-radius: 20px;
+  border: 1px solid gray;
+  height: 20px;
+}
+
+.password-box{
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.password{
+  border-radius: 20px;
+  width: 250px;
+  border: 1px solid gray;
+  height: 20px;
+}
+
+.pass-confirmation-box{
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.password-confirmation{
+  border-radius: 20px;
+  width: 250px;
+  border: 1px solid gray;
+  height: 20px;
+}
+
+.btn-box{
+  text-align: center;
+}
+
+.registrations-btn{
+  border-radius: 20px;
+  width: 90px;
+  border: none;
+  height: 40px;
+  background: #0066FF;
 }

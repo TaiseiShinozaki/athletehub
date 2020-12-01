@@ -5,33 +5,30 @@
     <link rel="stylesheet" href="registrations.new.css">
   </head>
   <body>
-    <div class="contents-box">
+    <div class="form-box">
       <div class="registration-form">
         <div class="title-box">
-          <h1 class="page-title">新規登録</h1>
+          <h1 class="page-title">アカウントを作成</h1>
         </div>
           <%= form_with model: @user, url: user_registration_path, local: true do |f| %>
           <%= render "devise/shared/error_messages", resource: resource %>
         <div class="name-box">
-          <%= f.text_area :username, class:"username", placeholder:"ユーザー名", autofocus: true, rows:"1" %>
+          <%= f.text_area :username, class:"username", placeholder:"ユーザー名", rows:"1" %>
         </div>
         <div class="email-box">
-          <%= f.label :email %><br />
-          <%= f.email_field :email, class:"email", autofocus: true %>
+          <%= f.email_field :email, class:"email", placeholder:"Email" %>
         </div>
         <div class="password-box">
-          <%= f.label :password %>
           <% if @minimum_password_length %>
-          <em>(<%= @minimum_password_length %> characters minimum)</em>
+          <em>(<%= @minimum_password_length %> 文字以上で登録してください)</em>
           <% end %><br />
-          <%= f.password_field :password, class:"password" %>
+          <%= f.password_field :password, class:"password", placeholder:"パスワード" %>
         </div>
         <div class="pass-confirmation-box">
-          <%= f.label :password_confirmation %><br />
-          <%= f.password_field :password_confirmation, class:"password-confirmation" %>
+          <%= f.password_field :password_confirmation, class:"password-confirmation", placeholder:"パスワード(確認)" %>
         </div>
         <div class="btn-box">
-          <%= f.submit "登録する", class:"regi-btn" %>
+          <%= f.submit "登録する", class:"registrations-btn" %>
         </div>
         <% end %>
       </div>

@@ -1,0 +1,20 @@
+.name-box{
+  margin-bottom: 40px;
+}
+
+.username{
+  height: 20px;
+}
+
+.record-box{
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sessions-btn{
+  border-radius: 20px;
+  width: 90px;
+  border: none;
+  height: 40px;
+  background: #FFFF00;
+}
