@@ -5,7 +5,7 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="new.css">
   </head>
   <body>
@@ -16,7 +16,7 @@
           <%= f.text_field :title, class:"content-title", placeholder:"タイトル", maxlength:"40" %>
         </div>
         <div class="content-text-box">
-          <%= f.text_area :text, class:"content-text", placeholder:"投稿内容 (例) 高校2年生(男)です。陸上競技100mをしています。12月の練習計画についてどうしたらよいのでしょうか。", rows:"10", maxlength:"1000" %>
+          <%= f.text_area :text, class:"content-text", placeholder:"投稿内容 (例) 高校2年生(男)です。陸上競技100mをしています。12月の練習計画についてどうしたらよいでしょうか。", rows:"10", maxlength:"1000" %>
         </div>
         <div class="post-btn-box">
           <%= f.submit "投稿する", class:"post-btn" %>
