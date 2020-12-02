@@ -90,17 +90,4 @@ a.new-post{
   font-family: "Sawarabi Gothic";
 }
 
-footer{
-  height: 80px;
-}
-
-.footer-container{
-  display: flex;
-  justify-content: center;
-}
-
-.footer-exp{
-  font-family: 'Open Sans', sans-serif;
-  color: gray;
-}
  

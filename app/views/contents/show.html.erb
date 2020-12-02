@@ -8,10 +8,14 @@
     <div class="post-detail-container">
       <div class="main-container">
         <div class="post-title-box">
-          <%= @content.title %>
+          <h1 class="post-title">
+            <%= @content.title %>
+          </h1>
         </div>
         <div class="post-text-box">
-          <%= @content.text %>
+          <h2 class="post-text">
+            <%= @content.text %>
+          </h2>
         </div>
         <div class="delete-contents">
           <% if user_signed_in? && current_user.id == @content.user_id %>
@@ -21,7 +25,7 @@
       </div>
       <div class="sub-container">
         <div class="comment-post-title-box">
-          <h1 class="comment-post-title">コメントを投稿する</h1>
+          <h3 class="comment-post-title">コメントを投稿する</h3>
         </div>
         <div class="comment-form-box">
           <% if user_signed_in? %>
@@ -33,7 +37,7 @@
           <% end %>
           <% else %>
           <div class="comment-guide-box">
-            <h2 class="comment-guide">※※※ コメントの投稿にはアカウント登録/ログインが必要です ※※※</h2>
+            <h4 class="comment-guide">※※※ コメントの投稿にはアカウント登録/ログインが必要です ※※※</h4>
           </div>
           <% end %>
         </div>
@@ -41,11 +45,13 @@
       <div class="third-container">
         <% if @comments %>
           <div class="comment-lists-title-box">
-            <h3 class="comment-lists-title">コメント一覧</h3>
+            <h5 class="comment-lists-title">コメント一覧</h5>
           </div>
           <% @comments.each do |comment| %>
           <div class="comment-lists">
-            <p><%= comment.user.username %>: <%= comment.text %></p>
+            <h6 class="comment-detail">
+              <%= comment.user.username %>: <%= comment.text %>
+            </h6>
           </div>
           <% end %>
         <% end %>

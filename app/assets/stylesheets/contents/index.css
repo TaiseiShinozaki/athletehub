@@ -1,8 +1,10 @@
-div.contents{
-  height: 90vh;
+.contents{
+  min-height: 100vh;
+  position: relative;
   width: 100vw;
-  margin: 0 auto;
   background-color: whitesmoke;
+  box-sizing: border-box;
+  padding-bottom: 80px;
 }
 
 h1.heading-name{
@@ -25,4 +27,30 @@ li{
 a{
   text-decoration: none;
   color: black;
+}
+
+.push{
+  height: 40px;
+  width: 100%;
+  background-color: whitesmoke;
+}
+
+.footer{
+  height: 80px;
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+}
+
+.footer-box{
+  height: 80px;
+}
+
+.footer-exp{
+  font-family: 'Open Sans', sans-serif;
+  color: gray;
+  padding: 0px;
+  margin: 0px;
+  font-size: 20px;
+  text-align: center;
 }
