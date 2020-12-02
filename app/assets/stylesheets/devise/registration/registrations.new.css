@@ -2,8 +2,11 @@
   display: flex;
   background-color: whitesmoke;
   justify-content: center;
-  height: 90vh;
+  min-height: 100vh;
   width: 100vw;
+  position: relative;
+  box-sizing: border-box;
+  padding-bottom: 80px;
 }
 
 .registration-title-box{
@@ -69,4 +72,24 @@
   border: none;
   height: 40px;
   background: #0066FF;
+}
+
+.footer{
+  height: 80px;
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+}
+
+.footer-box{
+  height: 80px;
+}
+
+.footer-exp{
+  font-family: 'Open Sans', sans-serif;
+  color: gray;
+  padding: 0px;
+  margin: 0px;
+  font-size: 20px;
+  text-align: center;
 }
