@@ -12,10 +12,20 @@
   text-align: center;
 }
 
-.post-title-box{
+.post-contributor-box{
   display: flex;
   justify-content: center;
   padding-top: 20px;
+}
+
+.post-contributor{
+  text-align: center;
+  width: 60%;
+}
+
+.post-title-box{
+  display: flex;
+  justify-content: center;
 }
 
 .post-title{

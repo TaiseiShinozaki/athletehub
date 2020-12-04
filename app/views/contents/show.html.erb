@@ -5,12 +5,17 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="show.css">
   </head>
   <body>
     <div class="post-detail-container">
       <div class="main-container">
+        <div class="post-contributor-box">
+          <h2 class="post-contributor">
+            投稿者: <%= @content.user.username %>
+          </h2>
+        </div>
         <div class="post-title-box">
           <h1 class="post-title">
             <%= @content.title %>
