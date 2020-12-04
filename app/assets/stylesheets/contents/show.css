@@ -1,9 +1,11 @@
 .post-detail-container{
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
+  position: relative;
   text-align: center;
   background-color: whitesmoke;
-  position: relative;
+  box-sizing: border-box;
+  padding-bottom: 80px;
 }
 
 .main-container{
@@ -73,7 +75,7 @@ a.delete-btn{
 .comment-lists-title{
   text-align: center;
   font-size: 30px;
-  margin: 20px 0 0 0;
+  margin: 20px 0;
   padding: 0px;
 }
 
@@ -86,5 +88,31 @@ a.delete-btn{
   width: 60%;
   font-size: 20px;
   margin: 0 0 10px 0;
+  text-align: center;
+}
+
+.show-push{
+  height: 40px;
+  width: 100vw;
+  background-color: whitesmoke;
+}
+
+.footer{
+  height: 80px;
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+}
+
+.footer-box{
+  height: 80px;
+}
+
+.footer-exp{
+  font-family: 'Open Sans', sans-serif;
+  color: gray;
+  padding: 0px;
+  margin: 0px;
+  font-size: 20px;
   text-align: center;
 }

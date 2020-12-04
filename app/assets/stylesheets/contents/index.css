@@ -29,9 +29,9 @@ a{
   color: black;
 }
 
-.push{
+.index-push{
   height: 40px;
-  width: 100%;
+  width: 100vw;
   background-color: whitesmoke;
 }
 
