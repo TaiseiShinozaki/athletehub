@@ -13,9 +13,9 @@ https://athletehub.herokuapp.com/
 
 # テスト用アカウント
 
-username: testuser1
-email: testuser1@gmail.com
-password: test10
+ユーザーネーム : testuser1
+メールアドレス : testuser1@gmail.com
+パスワード : test10
 
 # 利用方法
 
